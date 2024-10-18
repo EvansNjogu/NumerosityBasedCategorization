@@ -7,10 +7,11 @@ This repository contains the code, data and resources for my MSc thesis on devel
 
 ## Project Structure
 
-- `src/` - Code and scripts related to the project.
-- `data/` - Datasets used in the research.
-- `notebooks/` - Jupyter notebooks for experiments and analysis.
-- `docs/` - Thesis documentation, including the final report.
+- `data/` 
+- `docs/`
+- `notebooks/` 
+- `src/`
+
 
 ## Description
 
