@@ -5,13 +5,6 @@
 
 This repository contains the code, data and resources for my MSc thesis on developing methods for numerosity-based categorization. The research focuses on classifying objects into approximate groups like "few," "medium," and "many," where precise counts are unnecessary. Applications include areas such as crowd monitoring, object detection, and traffic analysis.
 
-## Project Structure
-
-- `data/` 
-- `docs/`
-- `notebooks/` 
-- `src/`
-
 
 ## Description
 
