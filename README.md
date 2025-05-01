@@ -6,7 +6,7 @@
 This repository contains the complete source code, datasets, and experiments accompanying my MSc thesis: **"Numerosity-Based Categorization in Neural Networks."**  
 The project investigates how deep learning models can perceive and categorize quantities into abstract concepts such as **"few"**, **"medium"**, and **"many"**, instead of relying on precise counts.
 
-> 📚 This work has been officially submitted and approved as part of the MSc program at Eötvös Loránd University (ELTE), Faculty of Informatics (2025).
+> 📚 This work has been officially submitted and is pending approval and defense as part of the MSc program at Eötvös Loránd University (ELTE), Faculty of Informatics (2025).
 
 ## Overview
 
