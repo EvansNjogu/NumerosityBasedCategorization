@@ -3,21 +3,41 @@
 [![Pytorch](https://img.shields.io/badge/PyTorch-2.0.1-EE4C2C.svg?style=flat&logo=pytorch)](https://pytorch.org)
 # Numerosity-Based Categorization in Neural Networks
 
-This repository contains the code, data and resources for my MSc thesis on numerosity-based categorization in neural networks. The project develops methods for classifying inputs into approximate categories such as **"few,"** **"medium,"** and **"many,"** where precise counts are unnecessary. These methods are particularly relevant to real-world applications—including crowd monitoring, traffic analysis and object detection—where approximate quantification is both efficient and practical.
+This repository contains the complete source code, datasets, and experiments accompanying my MSc thesis: **"Numerosity-Based Categorization in Neural Networks."**  
+The project investigates how deep learning models can perceive and categorize quantities into abstract concepts such as **"few"**, **"medium"**, and **"many"**, instead of relying on precise counts.
 
+> 📚 This work has been officially submitted and approved as part of the MSc program at Eötvös Loránd University (ELTE), Faculty of Informatics (2025).
 
-## Description
+## Overview
 
-Traditional counting methods typically rely on obtaining exact numerical counts, a requirement that may be impractical or unnecessary in many scenarios. In contrast, this research explores scalable and robust models that categorize quantities into broader, flexible categories. By leveraging concept learning and multi-modal approaches, the project aims to generalize across diverse input types—ranging from images and sequences to graphs—while maintaining both accuracy and adaptability.
+Precise counting is often unnecessary or impractical in real-world scenarios. This research explores how neural networks can learn **approximate quantity categories**, enabling faster, more flexible reasoning.  
+The project evaluates both baseline convolutional (CNN) models and CNN + Transformer hybrid models across a range of synthetic and structured datasets, including:
 
+- Dot patterns
+- Silhouette compositions (MPEG-7 inspired)
+- Controlled pixel-ratio datasets
 
-## Key Challenges to address
+Key research questions include:
+- Can neural models abstract numerosity beyond low-level visual cues?
+- How do models generalize across variations such as occlusion, clustering and shape changes?
+- Do models exhibit human-like biases (e.g., underestimation in dense scenes)?
 
-- Input-Agnostic Categorization: Developing methods that abstract numerosity concepts independently of the specific input format or modality.
+## Highlights
 
-- Formalizing Category Definitions: Establishing clear, flexible definitions for categories like "few" and "many" using techniques such as fuzzy logic, thresholding, and density-based clustering.
+- Developed custom datasets to test generalization under controlled variations (dot, silhouette, pixel-ratio).  
+- Designed and trained CNN and CNN + Transformer models for numerosity categorization.  
+- Demonstrated cognitive parallels between human and neural model perception (e.g., context-dependent numerosity biases).  
+- Evaluated cross-domain transfer learning performance.  
+- Thesis successfully submitted and awaiting defense.
 
-- Multi-Modal Data Integration: Integrating various data sources to achieve a unified understanding of numerosity that is robust across different domains.
+## Usage
+
+The repository includes:
+- Dataset generation scripts
+- Model implementations (PyTorch)
+- Experiment runners
+- Evaluation and visualization tools (confusion matrices, sample predictions)
+
 
 ## Objectives
 
