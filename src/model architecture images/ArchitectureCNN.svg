@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450">
+  <!-- Background -->
+  <rect width="1000" height="450" fill="white"/>
+  
+  <!-- Title -->
+  <text x="500" y="30" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">NumerosityCNN Architecture</text>
+  
+  <!-- Input -->
+  <rect x="50" y="100" width="60" height="200" fill="#D6EAF8" stroke="#2980B9" stroke-width="2"/>
+  <text x="80" y="310" font-family="Arial" font-size="12" text-anchor="middle">Input</text>
+  <text x="80" y="325" font-family="Arial" font-size="10" text-anchor="middle">128×128×1</text>
+  
+  <!-- CNN Layer 1 Section -->
+  <rect x="140" y="60" width="170" height="280" fill="none" stroke="#95A5A6" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="225" y="80" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Layer 1</text>
+  
+  <!-- ResBlock 1 -->
+  <rect x="155" y="100" width="90" height="200" fill="#D5F5E3" stroke="#27AE60" stroke-width="2"/>
+  <text x="200" y="180" font-family="Arial" font-size="12" text-anchor="middle">ResBlock</text>
+  <text x="200" y="195" font-family="Arial" font-size="10" text-anchor="middle">1→32</text>
+  
+  <!-- Internal structure of ResBlock 1 -->
+  <rect x="165" y="130" width="70" height="25" fill="#F9E79F" stroke="#F39C12" stroke-width="1"/>
+  <text x="200" y="146" font-family="Arial" font-size="8" text-anchor="middle">Conv3×3, 32</text>
+  
+  <rect x="165" y="160" width="70" height="15" fill="#FAD7A0" stroke="#E67E22" stroke-width="1"/>
+  <text x="200" y="170" font-family="Arial" font-size="8" text-anchor="middle">BatchNorm</text>
+  
+  <rect x="165" y="210" width="70" height="25" fill="#F9E79F" stroke="#F39C12" stroke-width="1"/>
+  <text x="200" y="226" font-family="Arial" font-size="8" text-anchor="middle">Conv3×3, 32</text>
+  
+  <rect x="165" y="240" width="70" height="15" fill="#FAD7A0" stroke="#E67E22" stroke-width="1"/>
+  <text x="200" y="250" font-family="Arial" font-size="8" text-anchor="middle">BatchNorm</text>
+  
+  <!-- Skip connection for ResBlock 1 -->
+  <path d="M180 120 C170 120, 170 260, 180 260" stroke="#27AE60" stroke-width="1.5" fill="none"/>
+  <line x1="180" y1="260" x2="220" y2="260" stroke="#27AE60" stroke-width="1.5"/>
+  <circle cx="220" cy="260" r="3" fill="#27AE60"/>
+  
+  <!-- MaxPool 1 -->
+  <rect x="260" y="125" width="35" height="150" fill="#FADBD8" stroke="#E74C3C" stroke-width="2"/>
+  <text x="277" y="190" font-family="Arial" font-size="12" text-anchor="middle" transform="rotate(-90, 277, 190)">MaxPool 2×2</text>
+  <text x="277" y="310" font-family="Arial" font-size="10" text-anchor="middle">64×64×32</text>
+  
+  <!-- CNN Layer 2 Section -->
+  <rect x="330" y="60" width="170" height="280" fill="none" stroke="#95A5A6" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="415" y="80" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Layer 2</text>
+  
+  <!-- ResBlock 2 -->
+  <rect x="345" y="100" width="90" height="200" fill="#D5F5E3" stroke="#27AE60" stroke-width="2"/>
+  <text x="390" y="180" font-family="Arial" font-size="12" text-anchor="middle">ResBlock</text>
+  <text x="390" y="195" font-family="Arial" font-size="10" text-anchor="middle">32→64</text>
+  
+  <!-- Internal structure of ResBlock 2 -->
+  <rect x="355" y="130" width="70" height="25" fill="#F9E79F" stroke="#F39C12" stroke-width="1"/>
+  <text x="390" y="146" font-family="Arial" font-size="8" text-anchor="middle">Conv3×3, 64</text>
+  
+  <rect x="355" y="160" width="70" height="15" fill="#FAD7A0" stroke="#E67E22" stroke-width="1"/>
+  <text x="390" y="170" font-family="Arial" font-size="8" text-anchor="middle">BatchNorm</text>
+  
+  <rect x="355" y="210" width="70" height="25" fill="#F9E79F" stroke="#F39C12" stroke-width="1"/>
+  <text x="390" y="226" font-family="Arial" font-size="8" text-anchor="middle">Conv3×3, 64</text>
+  
+  <rect x="355" y="240" width="70" height="15" fill="#FAD7A0" stroke="#E67E22" stroke-width="1"/>
+  <text x="390" y="250" font-family="Arial" font-size="8" text-anchor="middle">BatchNorm</text>
+  
+  <!-- Skip connection for ResBlock 2 -->
+  <path d="M370 120 C360 120, 360 260, 370 260" stroke="#27AE60" stroke-width="1.5" fill="none"/>
+  <line x1="370" y1="260" x2="410" y2="260" stroke="#27AE60" stroke-width="1.5"/>
+  <circle cx="410" cy="260" r="3" fill="#27AE60"/>
+  
+  <!-- MaxPool 2 -->
+  <rect x="450" y="125" width="35" height="150" fill="#FADBD8" stroke="#E74C3C" stroke-width="2"/>
+  <text x="467" y="190" font-family="Arial" font-size="12" text-anchor="middle" transform="rotate(-90, 467, 190)">MaxPool 2×2</text>
+  <text x="467" y="310" font-family="Arial" font-size="10" text-anchor="middle">32×32×64</text>
+  
+  <!-- CNN Layer 3 Section -->
+  <rect x="520" y="60" width="170" height="280" fill="none" stroke="#95A5A6" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="605" y="80" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Layer 3</text>
+  
+  <!-- ResBlock 3 -->
+  <rect x="535" y="100" width="90" height="200" fill="#D5F5E3" stroke="#27AE60" stroke-width="2"/>
+  <text x="580" y="180" font-family="Arial" font-size="12" text-anchor="middle">ResBlock</text>
+  <text x="580" y="195" font-family="Arial" font-size="10" text-anchor="middle">64→128</text>
+  
+  <!-- Internal structure of ResBlock 3 -->
+  <rect x="545" y="130" width="70" height="25" fill="#F9E79F" stroke="#F39C12" stroke-width="1"/>
+  <text x="580" y="146" font-family="Arial" font-size="8" text-anchor="middle">Conv3×3, 128</text>
+  
+  <rect x="545" y="160" width="70" height="15" fill="#FAD7A0" stroke="#E67E22" stroke-width="1"/>
+  <text x="580" y="170" font-family="Arial" font-size="8" text-anchor="middle">BatchNorm</text>
+  
+  <rect x="545" y="210" width="70" height="25" fill="#F9E79F" stroke="#F39C12" stroke-width="1"/>
+  <text x="580" y="226" font-family="Arial" font-size="8" text-anchor="middle">Conv3×3, 128</text>
+  
+  <rect x="545" y="240" width="70" height="15" fill="#FAD7A0" stroke="#E67E22" stroke-width="1"/>
+  <text x="580" y="250" font-family="Arial" font-size="8" text-anchor="middle">BatchNorm</text>
+  
+  <!-- Skip connection for ResBlock 3 -->
+  <path d="M560 120 C550 120, 550 260, 560 260" stroke="#27AE60" stroke-width="1.5" fill="none"/>
+  <line x1="560" y1="260" x2="600" y2="260" stroke="#27AE60" stroke-width="1.5"/>
+  <circle cx="600" cy="260" r="3" fill="#27AE60"/>
+  
+  <!-- MaxPool 3 -->
+  <rect x="640" y="125" width="35" height="150" fill="#FADBD8" stroke="#E74C3C" stroke-width="2"/>
+  <text x="657" y="190" font-family="Arial" font-size="12" text-anchor="middle" transform="rotate(-90, 657, 190)">MaxPool 2×2</text>
+  <text x="657" y="310" font-family="Arial" font-size="10" text-anchor="middle">16×16×128</text>
+  
+  <!-- Flatten Operation -->
+  <rect x="710" y="125" width="55" height="150" fill="#D6EAF8" stroke="#3498DB" stroke-width="2"/>
+  <text x="737" y="190" font-family="Arial" font-size="12" text-anchor="middle" transform="rotate(-90, 737, 190)">Flatten</text>
+  <text x="737" y="310" font-family="Arial" font-size="10" text-anchor="middle">32,768</text>
+  
+  <!-- Fully Connected Layer 1 -->
+  <rect x="800" y="100" width="70" height="200" fill="#EBDEF0" stroke="#8E44AD" stroke-width="2"/>
+  <text x="835" y="190" font-family="Arial" font-size="12" text-anchor="middle">FC Layer</text>
+  <text x="835" y="205" font-family="Arial" font-size="10" text-anchor="middle">32,768→128</text>
+  <text x="835" y="220" font-family="Arial" font-size="10" text-anchor="middle">ReLU</text>
+  
+  <!-- Fully Connected Layer 2 -->
+  <rect x="905" y="100" width="70" height="200" fill="#EBDEF0" stroke="#8E44AD" stroke-width="2"/>
+  <text x="940" y="190" font-family="Arial" font-size="12" text-anchor="middle">FC Layer</text>
+  <text x="940" y="205" font-family="Arial" font-size="10" text-anchor="middle">128→3</text>
+  <text x="940" y="310" font-family="Arial" font-size="10" text-anchor="middle">Output</text>
+  
+  <!-- Connections -->
+  <line x1="110" y1="200" x2="155" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="245" y1="200" x2="260" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="295" y1="200" x2="345" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="435" y1="200" x2="450" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="485" y1="200" x2="535" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="625" y1="200" x2="640" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="675" y1="200" x2="710" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="765" y1="200" x2="800" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="870" y1="200" x2="905" y2="200" stroke="black" stroke-width="2"/>
+  
+  <!-- Legend -->
+  <rect x="50" y="370" width="15" height="15" fill="#D5F5E3" stroke="#27AE60" stroke-width="2"/>
+  <text x="70" y="382" font-family="Arial" font-size="12" text-anchor="start">Residual Blocks</text>
+  
+  <rect x="200" y="370" width="15" height="15" fill="#FADBD8" stroke="#E74C3C" stroke-width="2"/>
+  <text x="220" y="382" font-family="Arial" font-size="12" text-anchor="start">Pooling Layers</text>
+  
+  <rect x="350" y="370" width="15" height="15" fill="#EBDEF0" stroke="#8E44AD" stroke-width="2"/>
+  <text x="370" y="382" font-family="Arial" font-size="12" text-anchor="start">Fully Connected Layers</text>
+
+  <rect x="550" y="370" width="15" height="15" fill="#D6EAF8" stroke="#3498DB" stroke-width="2"/>
+  <text x="570" y="382" font-family="Arial" font-size="12" text-anchor="start">Reshape Operations</text>
+  
+  <rect x="700" y="370" width="15" height="15" fill="#F9E79F" stroke="#F39C12" stroke-width="1"/>
+  <text x="720" y="382" font-family="Arial" font-size="12" text-anchor="start">Convolutional Layers</text>
+
+  <rect x="850" y="370" width="15" height="15" fill="#FAD7A0" stroke="#E67E22" stroke-width="1"/>
+  <text x="870" y="382" font-family="Arial" font-size="12" text-anchor="start">Normalization Layers</text>
+</svg>
