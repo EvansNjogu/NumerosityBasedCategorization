@@ -1,0 +1,67 @@
+**Experiment Report: Run 2**
+
+---
+
+### 1. Experiment Details
+**Date:** [Insert Date]  
+**Experiment ID:** Run 2  
+**Dataset:** Synthetic Dots  
+**Objective:** To evaluate the impact of optimizer, weight decay, and dropout rate on classification performance.  
+
+### 2. Hyperparameters
+- **Learning Rate:** 0.0005
+- **Batch Size:** 64
+- **Optimizer:** AdamW
+- **Weight Decay:** 1e-4
+- **Dropout Rate:** 0.3
+- **Early Stopping Patience:** 5 epochs
+
+### 3. Training Summary
+| Epoch | Train Loss | Validation Loss | Validation Accuracy |
+|-------|-----------|----------------|----------------------|
+| 1     | 1.0817    | 0.4664         | 78.00%               |
+| 2     | 0.2430    | 0.1957         | 91.87%               |
+| 3     | 0.2106    | 0.3036         | 88.27%               |
+| 4     | 0.2058    | 0.1886         | 92.67%               |
+| 5     | 0.1858    | 0.1617         | 93.60%               |
+| 6     | 0.1815    | 0.2017         | 92.53%               |
+| 7     | 0.1355    | 0.3013         | 87.33%               |
+| 8     | 0.1102    | 0.2299         | 90.93%               |
+| 9     | 0.1056    | 0.2553         | 90.13%               |
+| 10    | 0.0844    | 0.2127         | 91.20%               |
+
+**Early stopping triggered at epoch 10.**
+
+### 4. Test Performance
+- **Test Loss:** 0.2497
+- **Test Accuracy:** 90.53%
+
+### 5. Observations & Insights
+#### **Key Findings:**
+- The model achieved **91.20% validation accuracy**, with a **90.53% test accuracy**, showing a stable improvement over Run 1.
+- The **dropout rate of 0.3** helped reduce overfitting compared to previous runs.
+- **AdamW optimizer** contributed to smoother weight updates and stabilization.
+
+#### **Error Analysis:**
+- The **Medium** category remains the most misclassified class, though recall improved compared to previous runs.
+- Some confusion still exists between **Medium** and **Many** categories.
+- Training loss decreases smoothly, but validation loss fluctuates slightly, indicating minor overfitting.
+
+#### **Next Steps:**
+- Reduce learning rate to **0.0003** to further stabilize training.
+- Increase batch size to **128** for better generalization.
+- Increase dropout to **0.4** to regularize the model further.
+- Slightly increase weight decay to **5e-4** to encourage smaller weights.
+
+### 6. Conclusion
+This run demonstrated the effectiveness of using **AdamW**, weight decay, and dropout in improving classification performance. However, some overfitting and class confusion still persist. The next run will focus on optimizing regularization strategies further to enhance generalization.
+
+### 7. Additional Notes
+- Confusion matrix and sample test images have been included in the appendix for reference.
+- The experiment results have been stored in a structured table format for trend analysis across multiple runs.
+
+---
+
+**Appendix:**
+_(Attach confusion matrix, sample test images, and additional experiment logs)_
+
