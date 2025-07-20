@@ -4,24 +4,25 @@
 [![CUDA](https://img.shields.io/badge/CUDA-12.4-76B900.svg?style=flat&logo=nvidia&logoColor=white)](https://developer.nvidia.com/cuda-toolkit)
 # Numerosity-Based Categorization in Neural Networks
 
-This repository contains the complete source code, datasets, and experiments accompanying my MSc thesis: **"Numerosity-Based Categorization in Neural Networks."**  
-The project investigates how deep learning models can perceive and categorize quantities into abstract concepts such as **"few"**, **"medium"**, and **"many"**, instead of relying on precise counts.
+This repository contains the complete source code, datasets and experiments accompanying my MSc thesis: **"Numerosity-Based Categorization in Neural Networks."**  
+The project investigates how deep learning models can perceive and categorize quantities into abstract concepts such as **"few"**, **"medium"** and **"many"**, instead of relying on precise counts.
 
-> 📚 This work has been officially submitted and is pending approval and defense as part of the MSc program at Eötvös Loránd University (ELTE), Faculty of Informatics (2025). Supervised by Dr László Gulyás.
+This repository contains the complete source code, datasets and experiments for the MSc thesis:  
+**“Numerosity-Based Categorization in Neural Networks”**, completed at Eötvös Loránd University (ELTE), Faculty of Informatics, and graded **5/5**.  
+Supervised by Dr. László Gulyás, the work is currently being prepared for presentation at leading AI conferences.
 
-## Overview
+## 🔍 Project Summary
 
-Precise counting is often unnecessary or impractical in real-world scenarios. This research explores how neural networks can learn **approximate quantity categories**, enabling faster, more flexible reasoning.  
-The project evaluates both baseline convolutional (CNN) models and CNN + Transformer hybrid models across a range of synthetic and structured datasets, including:
+The project explores how neural networks can learn to **categorize quantities** (e.g., *few*, *medium*, *many*) without relying on precise counting.  
+Instead of designing counting mechanisms, we evaluate whether models can form **abstract numerical concepts** from raw visual data—a skill humans and animals exhibit in approximate number sense.
 
-- Dot patterns
-- Silhouette compositions (MPEG-7 inspired)
-- Controlled pixel-ratio datasets
+This work evaluates both **CNN** and **CNN + Transformer** architectures across diverse synthetic datasets, aiming to uncover perceptual generalization and emergent biases in quantity estimation.
 
-Key research questions include:
-- Can neural models abstract numerosity beyond low-level visual cues?
-- How do models generalize across variations such as occlusion, clustering and shape changes?
-- Do models exhibit human-like biases (e.g., underestimation in dense scenes)?
+## 🧪 Core Questions
+
+- Can neural models abstract quantity across unrelated object types?
+- Do visual cues like pixel ratio or clustering affect prediction biases?
+- Can these models generalize numerosity across changes in object shape, occlusion, or domain?
 
 ## Highlights
 
@@ -29,7 +30,7 @@ Key research questions include:
 - Designed and trained CNN and CNN + Transformer models for numerosity categorization.  
 - Demonstrated cognitive parallels between human and neural model perception (e.g., context-dependent numerosity biases).  
 - Evaluated cross-domain transfer learning performance.  
-- Thesis successfully submitted and awaiting defense.
+- Successfully defended as MSc Thesis and now undergoing conference submission
 
 ## Usage
 
