@@ -32,7 +32,7 @@ This work evaluates both **CNN** and **CNN + Transformer** architectures across 
 - Evaluated cross-domain transfer learning performance.  
 - Successfully defended as MSc Thesis and now undergoing conference submission
 
-## Usage
+## 🚀 Usage
 
 The repository includes:
 - Dataset generation scripts
@@ -40,7 +40,7 @@ The repository includes:
 - Experiment runners
 - Evaluation and visualization tools (confusion matrices, sample predictions)
 
-## Datasets
+## 📂 Datasets
 
 This repository includes several datasets used for training and evaluating numerosity categorization models.
 
@@ -59,7 +59,7 @@ data/
 
 ```
 
-### Not included: Within-Modality Dataset
+### ⛔ Not included: Within-Modality Dataset
 
 The **within-modality** dataset (~2.74 GB) is too large to be included via Git LFS.
 
@@ -68,6 +68,6 @@ You can download it from the link below:
 [Download Within-Modality Dataset](https://drive.google.com/drive/folders/1IB2pRZcvHvXse61OmFJADClWQv5HF1w_?usp=sharing)
 
 
-## Contact
+## 📚 Contact
 
 For any questions or collaboration opportunities, feel free to reach out to [László Gulyás](mailto:lgulyas@inf.elte.hu) or [Evans Njogu](mailto:njoguevans64@gmail.com).
