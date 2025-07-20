@@ -24,7 +24,7 @@ This work evaluates both **CNN** and **CNN + Transformer** architectures across 
 - Do visual cues like pixel ratio or clustering affect prediction biases?
 - Can these models generalize numerosity across changes in object shape, occlusion, or domain?
 
-## Highlights
+## 💡 Highlights
 
 - Developed custom datasets to test generalization under controlled variations (dot, silhouette, pixel-ratio).  
 - Designed and trained CNN and CNN + Transformer models for numerosity categorization.  
@@ -67,14 +67,6 @@ You can download it from the link below:
 
 [Download Within-Modality Dataset](https://drive.google.com/drive/folders/1IB2pRZcvHvXse61OmFJADClWQv5HF1w_?usp=sharing)
 
-
-## Objectives
-
-- Generalization: Train neural networks to learn abstract numerosity concepts that are independent of specific data formats or modalities.
-
-- Scalability: Build models capable of handling diverse datasets and adapting to the complexities of real-world applications.
-
-- Efficiency: Develop approximate quantification methods that are computationally efficient yet maintain high accuracy.
 
 ## Contact
 
